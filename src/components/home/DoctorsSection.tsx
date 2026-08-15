@@ -31,7 +31,7 @@ export function DoctorsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Button variant="outline" className="rounded-full group text-secondary-foreground border-secondary-foreground/20 hover:bg-white hover:text-secondary" asChild>
+            <Button className="rounded-full group bg-white text-secondary border-none hover:bg-primary hover:text-white transition-colors" asChild>
               <Link href="/doctors">
                 View All Doctors
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
