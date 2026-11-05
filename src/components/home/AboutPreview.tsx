@@ -29,7 +29,7 @@ export function AboutPreview() {
             </RevealText>
             
             <RevealText as="p" delay={0.1} className="text-lg text-muted-foreground leading-relaxed mb-8">
-              At {hospitalConfig.name}, we believe that true healing begins with compassion. Our state-of-the-art facilities and experienced specialists are dedicated to providing personalized care that addresses the unique needs of every patient who walks through our doors.
+              At {hospitalConfig.name}, we believe that ethical medical practice begins with patient safety. Our modern clinical facilities and qualified medical specialists are committed to providing patient-centered healthcare adhering to established clinical guidelines.
             </RevealText>
             
             <motion.div

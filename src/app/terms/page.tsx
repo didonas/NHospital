@@ -58,6 +58,18 @@ export default function TermsPage() {
             </p>
           </div>
 
+          <div>
+            <h2 className="text-2xl font-heading font-bold text-foreground mb-3">5. NMC Ethical Guidelines Adherence</h2>
+            <p>
+              In accordance with National Medical Commission Guidelines (Notification No. R-13014/01/2024-Ethics):
+            </p>
+            <ul className="list-disc pl-6 space-y-1.5 text-sm mt-2">
+              <li>Doctor listings strictly function as an objective patient-information directory in accordance with Clause 9.1.</li>
+              <li>No promotional patient testimonials, before-and-after surgical pictures, commercial discounts, or comparative claims (&ldquo;No. 1&rdquo;, &ldquo;Best&rdquo;) are published.</li>
+              <li>AI-generated synthetic patient representations or unverified outcome claims are strictly prohibited on all hospital communications.</li>
+            </ul>
+          </div>
+
           <div className="pt-8 border-t border-border flex justify-between items-center">
             <Button variant="outline" className="rounded-full" asChild>
               <Link href="/">

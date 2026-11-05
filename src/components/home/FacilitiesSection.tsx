@@ -19,7 +19,7 @@ const mockFacilities = [
   {
     id: "fac-2",
     name: "Digital Imaging",
-    desc: "State-of-the-art radiology department with high-resolution MRI and CT.",
+    desc: "Diagnostic radiology department offering MRI, CT, and digital radiography.",
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2000&auto=format&fit=crop"
   },
   {

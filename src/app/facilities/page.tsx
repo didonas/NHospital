@@ -10,10 +10,10 @@ export default function FacilitiesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center mb-20">
             <RevealText as="h1" className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold tracking-tight mb-6">
-              World-Class Facilities
+              Clinical Facilities & Infrastructure
             </RevealText>
             <RevealText as="p" delay={0.1} className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Designed for healing, equipped with cutting-edge medical technology.
+              Factual overview of inpatient departments, diagnostic equipment, and clinical facilities available at Jusst Hospital.
             </RevealText>
           </div>
 

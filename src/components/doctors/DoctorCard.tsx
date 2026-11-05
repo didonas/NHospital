@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarPlus, ShieldCheck, ArrowRight, Award } from "lucide-react";
+import { CalendarPlus, ShieldCheck, ArrowRight, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface DoctorProps {
@@ -16,6 +16,8 @@ interface DoctorProps {
     medicalCouncil?: string;
     experience: number;
     image: string;
+    consultationDays?: string[];
+    timings?: string;
   };
 }
 
@@ -63,13 +65,21 @@ export function DoctorCard({ doctor }: DoctorProps) {
           </div>
         </div>
 
-        {/* Clinical Experience & Statutory Status */}
-        <div className="bg-muted/40 rounded-2xl p-3 mb-5 border border-border/40 space-y-1">
-          <div className="flex items-center text-xs text-muted-foreground">
+        {/* Availability & Statutory Status (NMC Clause 9.1) */}
+        <div className="bg-muted/40 rounded-2xl p-3 mb-5 border border-border/40 space-y-1.5 text-xs text-muted-foreground">
+          <div className="flex items-center">
             <Award className="w-3.5 h-3.5 mr-1.5 text-primary shrink-0" />
             <span><strong className="text-card-foreground font-semibold">{doctor.experience}+ Years</strong> Clinical Practice</span>
           </div>
-          <div className="text-[11px] text-muted-foreground pl-5">
+          {doctor.timings && (
+            <div className="flex items-center">
+              <Clock className="w-3.5 h-3.5 mr-1.5 text-primary shrink-0" />
+              <span className="truncate">
+                OPD: {doctor.consultationDays ? doctor.consultationDays.slice(0, 3).map(d => d.slice(0, 3)).join(", ") : "Mon-Sat"} ({doctor.timings})
+              </span>
+            </div>
+          )}
+          <div className="text-[11px] text-muted-foreground/80 pl-5">
             Registered Medical Practitioner (RMP)
           </div>
         </div>

@@ -25,8 +25,8 @@ export const hospitalConfig = {
 
   stats: {
     doctors: "15+",
+    departments: "8+",
     experience: "20+",
-    patients: "10K+",
     emergency: "24/7"
   },
 

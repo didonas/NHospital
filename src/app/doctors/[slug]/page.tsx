@@ -175,6 +175,10 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                       <span>Qualifications:</span>
                       <span className="font-medium text-foreground text-right">{doctor.qualification}</span>
                     </div>
+                    <div className="flex justify-between pt-1 border-t border-border/40">
+                      <span>Consultation Fee:</span>
+                      <span className="font-medium text-foreground">Standard Hospital Tariff</span>
+                    </div>
                   </div>
                 </div>
 

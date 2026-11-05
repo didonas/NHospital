@@ -40,10 +40,10 @@ export default function AboutPage() {
               </RevealText>
               <div className="space-y-4 text-secondary-foreground/80 text-lg leading-relaxed">
                 <RevealText as="p" delay={0.1}>
-                  Founded with a vision to redefine healthcare delivery, {hospitalConfig.name} has grown from a humble clinic to a multi-speciality medical institution. We believe that world-class healthcare should be accessible, transparent, and driven by empathy.
+                  Founded with a vision to provide structured healthcare delivery, {hospitalConfig.name} operates as a multi-speciality medical institution. We believe that quality, ethical healthcare should be accessible, transparent, and driven by clinical empathy.
                 </RevealText>
                 <RevealText as="p" delay={0.2}>
-                  Over the past {hospitalConfig.stats.experience} years, we have touched the lives of {hospitalConfig.stats.patients} patients. Our journey has been guided by a single, unwavering philosophy: placing the patient at the heart of everything we do.
+                  Over the past {hospitalConfig.stats.experience} years, our establishment has expanded to {hospitalConfig.stats.departments} dedicated clinical departments. Our practice is guided by an unwavering commitment: adhering to established clinical guidelines and placing patient safety at the center of medical care.
                 </RevealText>
               </div>
             </div>
@@ -77,10 +77,10 @@ export default function AboutPage() {
 
             <div className="order-1 md:order-2">
               <RevealText as="h2" className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                Why Patients Trust Us
+                Our Institutional Care Principles
               </RevealText>
               <RevealText as="p" delay={0.1} className="text-lg text-muted-foreground mb-8">
-                Trust is built over time through consistent, high-quality care. Our multidisciplinary team of experts utilizes state-of-the-art technology to ensure accurate diagnoses and effective treatments.
+                Clinical care is delivered in accordance with established national healthcare guidelines. Our multidisciplinary team of medical practitioners utilizes modern diagnostic facilities to support timely clinical evaluation and treatment.
               </RevealText>
               
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">

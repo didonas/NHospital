@@ -18,9 +18,9 @@ export function Footer() {
               {hospitalConfig.shortName} <br/> HOSPITAL
             </RevealText>
             <RevealText as="p" delay={0.1} className="text-secondary-foreground/70 max-w-sm text-lg">
-              Exceptional care.<br />
-              Every patient.<br />
-              Every day.
+              Ethical Care.<br />
+              Evidence-Based Practice.<br />
+              Patient Safety.
             </RevealText>
           </div>
 

@@ -26,7 +26,7 @@ export default function DoctorsPage() {
           <div className="max-w-3xl mx-auto mb-16 p-4 md:p-5 rounded-2xl bg-muted/40 border border-border flex items-start gap-3.5 text-xs sm:text-sm text-muted-foreground">
             <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" />
             <p>
-              In accordance with National Medical Commission (NMC) guidelines, doctor profiles are provided for public information and patient scheduling convenience. Information includes statutory registration numbers and NMC-recognized medical degrees.
+              In accordance with National Medical Commission (NMC) Guidelines (Clause 9.1), doctor profiles are provided as an objective patient-information directory containing names, NMC-recognized qualifications, clinical specialties, State Medical Council registrations, and outpatient OPD availability.
             </p>
           </div>
 

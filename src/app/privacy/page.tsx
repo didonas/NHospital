@@ -60,11 +60,16 @@ export default function PrivacyPage() {
           <div>
             <h2 className="text-2xl font-heading font-bold mb-4 flex items-center gap-2">
               <Lock className="w-6 h-6 text-primary" />
-              3. Prohibition on Unauthorized Disclosure & Advertising
+              3. Prohibition on Promotional Media & Patient Data Protection
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-base">
-              Under NMC guidelines, patient clinical photographs, case studies, or medical details will never be used for promotional advertising, commercial solicitation, or shared with third-party advertisers without explicit, voluntary, and informed written consent from the patient or legal guardian.
+            <p className="text-muted-foreground leading-relaxed text-base mb-3">
+              In strict accordance with the National Medical Commission Guidelines (No. R-13014/01/2024-Ethics, Sections 6 and 7):
             </p>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground text-sm">
+              <li>Patient photographs, clinical images, treatment outcomes, or before-and-after depictions are strictly prohibited from being used for advertising or commercial solicitation, even with patient consent.</li>
+              <li>Artificial Intelligence (AI) is never used to generate, modify, or simulate patient testimonials, images, voices, or synthetic medical endorsements.</li>
+              <li>Processing, storage, and handling of digital patient health records strictly complies with the <strong>Digital Personal Data Protection Act, 2023</strong> and the <strong>Information Technology Act, 2000</strong>.</li>
+            </ul>
           </div>
 
           <div>

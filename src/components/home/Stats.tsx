@@ -9,9 +9,9 @@ export function Stats() {
     <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center divide-x divide-secondary-foreground/10">
-          <StatItem value={hospitalConfig.stats.doctors} label="Specialists" />
-          <StatItem value={hospitalConfig.stats.experience} label="Years of Care" />
-          <StatItem value={hospitalConfig.stats.patients} label="Patients Treated" />
+          <StatItem value={hospitalConfig.stats.doctors} label="Medical Specialists" />
+          <StatItem value={hospitalConfig.stats.departments} label="Clinical Departments" />
+          <StatItem value={hospitalConfig.stats.experience} label="Years of Service" />
           <StatItem value={hospitalConfig.stats.emergency} label="Emergency Support" />
         </div>
       </div>

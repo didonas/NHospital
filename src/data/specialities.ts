@@ -4,8 +4,8 @@ export const specialities = [
     slug: "cardiology",
     name: "Cardiology",
     icon: "HeartPulse",
-    shortDescription: "Advanced heart care and cardiovascular surgeries.",
-    longDescription: "Our Cardiology department provides comprehensive care for all heart-related conditions, utilizing state-of-the-art diagnostic and therapeutic technologies.",
+    shortDescription: "Advanced heart care and cardiovascular evaluations.",
+    longDescription: "Our Cardiology department provides structured clinical care for heart-related conditions, utilizing modern diagnostic and evidence-based therapeutic modalities.",
     image: "/images/specialities/cardiology.jpg"
   },
   {

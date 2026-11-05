@@ -63,13 +63,13 @@ export default function PatientCharterPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/20 text-accent text-xs font-semibold uppercase tracking-wider mb-4 border border-accent/20">
               <ShieldCheck className="w-4 h-4" />
-              National Medical Commission (NMC) Ethical Compliance
+              NMC Guidelines Notification No. R-13014/01/2024-Ethics
             </div>
             <RevealText as="h1" className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               Patient Rights & Responsibilities Charter
             </RevealText>
             <RevealText as="p" delay={0.1} className="text-lg md:text-xl text-secondary-foreground/80 leading-relaxed max-w-2xl mx-auto">
-              {hospitalConfig.name} is committed to ethical medical practice, patient autonomy, and dignified healthcare delivery in accordance with the Ministry of Health and NMC guidelines.
+              {hospitalConfig.name} is committed to ethical medical practice, patient autonomy, and transparent healthcare delivery in strict accordance with National Medical Commission (NMC) regulations.
             </RevealText>
           </div>
         </div>

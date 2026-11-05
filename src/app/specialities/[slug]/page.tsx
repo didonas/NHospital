@@ -68,7 +68,7 @@ export default async function SpecialityDetailPage({ params }: { params: Promise
                 <p>{speciality.longDescription}</p>
                 {/* Demo extra content */}
                 <p className="mt-4">
-                  Our team of highly skilled specialists is dedicated to providing personalized care using the latest medical advancements. From preventative screening to complex surgical procedures, we ensure the best possible outcomes for our patients.
+                  Our medical specialists provide clinical care in accordance with established medical guidelines. From preventative screening to diagnostic and surgical procedures, care is directed toward patient safety and clinical recovery.
                 </p>
                 <h3 className="text-2xl font-heading font-bold mt-10 mb-4 text-foreground">Treatments & Services</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -93,10 +93,11 @@ export default async function SpecialityDetailPage({ params }: { params: Promise
                           <Image src={doctor.image} alt={doctor.name} fill className="object-cover object-top" />
                         </div>
                         <div>
-                          <Link href={`/doctors/${doctor.slug}`} className="font-heading font-bold text-lg hover:text-primary transition-colors">
+                          <Link href={`/doctors/${doctor.slug}`} className="font-heading font-bold text-lg hover:text-primary transition-colors block">
                             {doctor.name}
                           </Link>
                           <p className="text-secondary-foreground/70 text-sm">{doctor.qualification}</p>
+                          <p className="text-secondary-foreground/60 text-xs font-mono mt-0.5">Reg: {doctor.registrationNumber}</p>
                         </div>
                       </div>
                     ))
