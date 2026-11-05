@@ -21,7 +21,7 @@ interface DoctorProps {
 
 export function DoctorCard({ doctor }: DoctorProps) {
   return (
-    <div className="rounded-3xl overflow-hidden bg-card border border-border/80 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full p-5 md:p-6 justify-between">
+    <div className="rounded-3xl overflow-hidden bg-card text-card-foreground border border-border/80 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full p-5 md:p-6 justify-between">
       {/* Top Credentials & Department Header */}
       <div>
         <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-border/60">
@@ -49,10 +49,10 @@ export function DoctorCard({ doctor }: DoctorProps) {
           </div>
 
           <div className="min-w-0 flex-1">
-            <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground leading-snug mb-1">
+            <h3 className="text-lg sm:text-xl font-heading font-bold text-card-foreground leading-snug mb-1">
               {doctor.name}
             </h3>
-            <p className="text-xs sm:text-sm text-foreground/80 font-medium leading-tight mb-1.5">
+            <p className="text-xs sm:text-sm text-card-foreground/85 font-medium leading-tight mb-1.5">
               {doctor.qualification}
             </p>
             {doctor.medicalCouncil && (
@@ -67,7 +67,7 @@ export function DoctorCard({ doctor }: DoctorProps) {
         <div className="bg-muted/40 rounded-2xl p-3 mb-5 border border-border/40 space-y-1">
           <div className="flex items-center text-xs text-muted-foreground">
             <Award className="w-3.5 h-3.5 mr-1.5 text-primary shrink-0" />
-            <span><strong className="text-foreground font-semibold">{doctor.experience}+ Years</strong> Clinical Practice</span>
+            <span><strong className="text-card-foreground font-semibold">{doctor.experience}+ Years</strong> Clinical Practice</span>
           </div>
           <div className="text-[11px] text-muted-foreground pl-5">
             Registered Medical Practitioner (RMP)
@@ -78,13 +78,12 @@ export function DoctorCard({ doctor }: DoctorProps) {
       {/* Directory Actions */}
       <div className="flex flex-row gap-2.5 pt-2">
         <Button 
-          variant="outline" 
-          className="flex-1 rounded-full text-xs sm:text-sm h-11 border-border hover:bg-muted font-medium" 
+          className="flex-1 rounded-full text-xs sm:text-sm h-11 bg-white text-secondary border border-border/80 hover:bg-secondary hover:text-white font-medium shadow-none transition-colors" 
           asChild
         >
           <Link href={`/doctors/${doctor.slug}`}>
-            Credentials
-            <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
+            <span>Credentials</span>
+            <ArrowRight className="ml-1.5 w-3.5 h-3.5 shrink-0" />
           </Link>
         </Button>
         <Button 
