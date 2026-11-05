@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarPlus } from "lucide-react";
+import { CalendarPlus, ShieldCheck, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface DoctorProps {
@@ -21,48 +21,79 @@ interface DoctorProps {
 
 export function DoctorCard({ doctor }: DoctorProps) {
   return (
-    <div className="group relative rounded-2xl overflow-hidden bg-card border border-border flex flex-col h-full">
-      <div className="relative aspect-[4/5] overflow-hidden w-full">
-        {/* Placeholder gradient just in case image doesn't load */}
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-secondary/10 z-10" />
-        
-        <Image
-          src={doctor.image}
-          alt={doctor.name}
-          fill
-          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+    <div className="rounded-3xl overflow-hidden bg-card border border-border/80 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full p-5 md:p-6 justify-between">
+      {/* Top Credentials & Department Header */}
+      <div>
+        <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-border/60">
+          <span className="inline-block px-3 py-1 bg-primary/10 text-primary font-semibold text-xs uppercase tracking-wider rounded-full">
+            {doctor.speciality}
+          </span>
+          {doctor.registrationNumber && (
+            <span className="inline-flex items-center text-[11px] font-mono font-medium text-muted-foreground bg-muted/60 px-2.5 py-1 rounded-full border border-border/50">
+              <ShieldCheck className="w-3.5 h-3.5 mr-1 text-primary" />
+              {doctor.registrationNumber}
+            </span>
+          )}
+        </div>
 
-        <div className="absolute inset-0 z-20 p-5 md:p-6 flex flex-col justify-end">
-          <div className="transform transition-transform duration-500 ease-out lg:translate-y-4 lg:group-hover:translate-y-0">
-            <div className="flex flex-wrap items-center gap-2 mb-2.5">
-              <span className="inline-block px-3 py-1 bg-primary/90 backdrop-blur text-primary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded-full">
-                {doctor.speciality}
-              </span>
-              {doctor.registrationNumber && (
-                <span className="inline-block px-2.5 py-0.5 bg-background/80 backdrop-blur border border-white/20 text-white text-[10px] font-mono tracking-tight rounded-full">
-                  Reg: {doctor.registrationNumber}
-                </span>
-              )}
-            </div>
-            <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-1">{doctor.name}</h3>
-            <p className="text-white/80 text-xs sm:text-sm mb-1">{doctor.qualification}</p>
-            <p className="text-accent text-xs sm:text-sm font-medium">{doctor.experience}+ Years Clinical Experience</p>
+        {/* Doctor Identity Block */}
+        <div className="flex items-center gap-4 mb-4">
+          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-primary/20 shrink-0 bg-muted/40">
+            <Image
+              src={doctor.image}
+              alt={doctor.name}
+              fill
+              className="object-cover object-top"
+              sizes="96px"
+            />
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground leading-snug mb-1">
+              {doctor.name}
+            </h3>
+            <p className="text-xs sm:text-sm text-foreground/80 font-medium leading-tight mb-1.5">
+              {doctor.qualification}
+            </p>
+            {doctor.medicalCouncil && (
+              <p className="text-[11px] text-muted-foreground truncate">
+                {doctor.medicalCouncil}
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Clinical Experience & Statutory Status */}
+        <div className="bg-muted/40 rounded-2xl p-3 mb-5 border border-border/40 space-y-1">
+          <div className="flex items-center text-xs text-muted-foreground">
+            <Award className="w-3.5 h-3.5 mr-1.5 text-primary shrink-0" />
+            <span><strong className="text-foreground font-semibold">{doctor.experience}+ Years</strong> Clinical Practice</span>
+          </div>
+          <div className="text-[11px] text-muted-foreground pl-5">
+            Registered Medical Practitioner (RMP)
           </div>
         </div>
       </div>
 
-      <div className="p-4 sm:p-5 flex flex-row gap-2 sm:gap-3 bg-card relative z-30 lg:-translate-y-2 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300">
-        <Button className="flex-1 rounded-full group/btn bg-white text-secondary border border-border hover:bg-secondary hover:text-white h-11 sm:h-12 px-2 sm:px-4" asChild>
+      {/* Directory Actions */}
+      <div className="flex flex-row gap-2.5 pt-2">
+        <Button 
+          variant="outline" 
+          className="flex-1 rounded-full text-xs sm:text-sm h-11 border-border hover:bg-muted font-medium" 
+          asChild
+        >
           <Link href={`/doctors/${doctor.slug}`}>
-            <span className="truncate text-xs sm:text-sm">Profile</span>
+            Credentials
+            <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
           </Link>
         </Button>
-        <Button className="flex-1 rounded-full group/btn bg-primary text-primary-foreground hover:bg-primary/90 h-11 sm:h-12 px-2 sm:px-4" asChild>
+        <Button 
+          className="flex-1 rounded-full text-xs sm:text-sm h-11 bg-primary text-primary-foreground hover:bg-primary/90 font-medium" 
+          asChild
+        >
           <Link href={`/appointment?doctor=${doctor.slug}&speciality=${doctor.speciality.toLowerCase()}`}>
-            <CalendarPlus className="mr-1.5 sm:mr-2 w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-            <span className="truncate text-xs sm:text-sm">Book</span>
+            <CalendarPlus className="mr-1.5 w-3.5 h-3.5 shrink-0" />
+            OPD Consult
           </Link>
         </Button>
       </div>
