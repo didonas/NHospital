@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, User, Stethoscope, Phone, Mail } from "lucide-react";
 import { useAppointment } from "./AppointmentContext";
@@ -92,8 +93,12 @@ export function BookingSummary() {
 
       </div>
 
-      <div className="pt-4 text-center text-sm text-muted-foreground">
-        By confirming, you agree to {hospitalConfig.name}&apos;s terms of service and privacy policy.
+      <div className="pt-4 text-center text-xs text-muted-foreground leading-relaxed">
+        By confirming, you acknowledge {hospitalConfig.name}&apos;s{" "}
+        <Link href="/patient-charter" className="underline hover:text-primary">Patient Charter</Link>,{" "}
+        <Link href="/privacy" className="underline hover:text-primary">Health Data Privacy</Link>{" "}
+        and{" "}
+        <Link href="/terms" className="underline hover:text-primary">Terms of Service</Link>.
       </div>
 
       <div className="pt-2">

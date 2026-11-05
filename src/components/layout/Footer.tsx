@@ -33,11 +33,13 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col space-y-4">
-            <h3 className="font-heading font-semibold text-lg text-secondary-foreground/90 mb-2">Patients</h3>
-            <FooterLink href="/appointment">Book Appointment</FooterLink>
-            <FooterLink href="/contact">Contact</FooterLink>
+            <h3 className="font-heading font-semibold text-lg text-secondary-foreground/90 mb-2">Patients & Ethics</h3>
+            <FooterLink href="/appointment">Book Consultation</FooterLink>
+            <FooterLink href="/patient-charter">Patient Charter & Rights</FooterLink>
+            <FooterLink href="/privacy">Health Data Privacy</FooterLink>
+            <FooterLink href="/contact">Grievance & Helpdesk</FooterLink>
             <FooterLink href={`tel:${hospitalConfig.contact.emergencyPhone.replace(/\D/g, '')}`} className="text-emergency">
-              Emergency
+              Emergency: {hospitalConfig.contact.emergencyPhone}
             </FooterLink>
             <FooterLink href={hospitalConfig.contact.googleMapsUrl}>Directions</FooterLink>
           </div>
@@ -63,10 +65,21 @@ export function Footer() {
           
         </div>
 
-        <div className="pt-8 border-t border-secondary-foreground/10 flex flex-col md:flex-row items-center justify-between text-xs text-secondary-foreground/50">
+        {/* NMC Statutory Advisory & Clinical Establishment Notice */}
+        <div className="pt-8 pb-6 border-t border-secondary-foreground/10 text-xs text-secondary-foreground/60 leading-relaxed space-y-2">
+          <p className="font-semibold text-secondary-foreground/80">
+            Clinical Establishment Registration: {hospitalConfig.registration.clinicalEstablishmentNo} | Regulated by {hospitalConfig.registration.supervisingAuthority}
+          </p>
+          <p>
+            {hospitalConfig.disclaimer}
+          </p>
+        </div>
+
+        <div className="pt-6 border-t border-secondary-foreground/10 flex flex-col md:flex-row items-center justify-between text-xs text-secondary-foreground/50">
           <p>© {currentYear} {hospitalConfig.name}. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/patient-charter" className="hover:text-white transition-colors">Patient Charter</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy & Health Records</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>

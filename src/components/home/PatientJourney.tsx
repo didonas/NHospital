@@ -8,23 +8,23 @@ import { RevealText } from "@/components/animations/RevealText";
 const journeySteps = [
   {
     num: "01",
-    title: "Choose a Specialist",
-    desc: "Browse our extensive roster of internationally trained medical professionals."
+    title: "Select Department & Doctor",
+    desc: "Review verified qualifications, council registrations, and OPD schedules."
   },
   {
     num: "02",
-    title: "Book Your Appointment",
-    desc: "Select a convenient time slot using our seamless booking system."
+    title: "Schedule Consultation",
+    desc: "Choose an outpatient consultation time slot through our structured booking system."
   },
   {
     num: "03",
-    title: "Visit the Hospital",
-    desc: "Experience our modern, welcoming facilities designed for your comfort."
+    title: "In-Person Clinical Evaluation",
+    desc: "Undergo comprehensive clinical history evaluation, physical examination, and diagnostic review."
   },
   {
     num: "04",
-    title: "Receive Personalised Care",
-    desc: "Get an expert diagnosis and a tailored treatment plan."
+    title: "Transparent Treatment Plan",
+    desc: "Receive evidence-based therapeutic recommendations and thorough informed clinical counseling."
   }
 ];
 

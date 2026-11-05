@@ -19,10 +19,10 @@ export function DoctorsSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <RevealText as="h2" className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-white mb-4">
-              Meet our specialists.
+              Medical specialists directory.
             </RevealText>
             <RevealText as="p" delay={0.1} className="text-secondary-foreground/70 max-w-xl text-lg">
-              Our team of internationally trained medical experts brings years of experience and dedicated focus to patient care.
+              Registered medical practitioners with recognized qualifications, verified state council registrations, and structured OPD consultation hours.
             </RevealText>
           </div>
           <motion.div

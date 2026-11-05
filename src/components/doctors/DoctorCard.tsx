@@ -12,6 +12,8 @@ interface DoctorProps {
     name: string;
     speciality: string;
     qualification: string;
+    registrationNumber?: string;
+    medicalCouncil?: string;
     experience: number;
     image: string;
   };
@@ -34,12 +36,19 @@ export function DoctorCard({ doctor }: DoctorProps) {
 
         <div className="absolute inset-0 z-20 p-5 md:p-6 flex flex-col justify-end">
           <div className="transform transition-transform duration-500 ease-out lg:translate-y-4 lg:group-hover:translate-y-0">
-            <span className="inline-block px-3 py-1 bg-primary/90 backdrop-blur text-primary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded-full mb-3">
-              {doctor.speciality}
-            </span>
+            <div className="flex flex-wrap items-center gap-2 mb-2.5">
+              <span className="inline-block px-3 py-1 bg-primary/90 backdrop-blur text-primary-foreground text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded-full">
+                {doctor.speciality}
+              </span>
+              {doctor.registrationNumber && (
+                <span className="inline-block px-2.5 py-0.5 bg-background/80 backdrop-blur border border-white/20 text-white text-[10px] font-mono tracking-tight rounded-full">
+                  Reg: {doctor.registrationNumber}
+                </span>
+              )}
+            </div>
             <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-1">{doctor.name}</h3>
             <p className="text-white/80 text-xs sm:text-sm mb-1">{doctor.qualification}</p>
-            <p className="text-accent text-xs sm:text-sm font-medium">{doctor.experience}+ Years Experience</p>
+            <p className="text-accent text-xs sm:text-sm font-medium">{doctor.experience}+ Years Clinical Experience</p>
           </div>
         </div>
       </div>

@@ -65,7 +65,12 @@ export function DoctorStep() {
                 <div className="flex-1 min-w-0">
                   <h3 className="font-heading font-bold text-base truncate">{doc.name}</h3>
                   <p className="text-muted-foreground text-xs truncate mb-1">{doc.qualification}</p>
-                  <p className="text-accent text-xs font-medium">{doc.experience}+ Years Exp.</p>
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <span className="text-accent text-xs font-medium">{doc.experience}+ Yrs Exp</span>
+                    <span className="text-[10px] font-mono bg-muted px-1.5 py-0.5 rounded text-muted-foreground">
+                      {doc.registrationNumber}
+                    </span>
+                  </div>
                 </div>
                 
                 {isSelected && (
